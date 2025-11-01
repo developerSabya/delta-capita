@@ -34,8 +34,7 @@ app.post('/sign', upload.single('pdf'), async (req, res) => {
       borderWidth: 1
     });
 
-    lastPage.drawText(`  Sabyasachi Sahoo
-        Signed by Mock Server`, {
+    lastPage.drawText(`Sabyasachi Sahoo`, {
       x: 50,
       y: 70,
       size: 12,

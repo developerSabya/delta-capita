@@ -58,7 +58,7 @@ export default function PdfViewer({ blob }) {
   }
 
   return (
-    <div style={{height:'100%',display:'flex',flexDirection:'column'}}>
+    <div className="pdfviewer">
       <div className="viewer-controls">
         <div className="pager">
           <button onClick={prev} disabled={pageNum <= 1}>&lt;</button>
@@ -74,8 +74,8 @@ export default function PdfViewer({ blob }) {
           <button onClick={download}>Download</button>
         </div>
       </div>
-      <div style={{flex:1,overflow:'auto',display:'flex',alignItems:'center',justifyContent:'center'}}>
-        <canvas ref={canvasRef} style={{maxWidth:'100%',height:'auto'}} />
+      <div className="pdfviewer-body">
+        <canvas ref={canvasRef} className="pdf-canvas" />
       </div>
     </div>
   )
